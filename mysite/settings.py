@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
-    'imagekit',
 ]
 
 MIDDLEWARE = [
@@ -122,9 +121,3 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-MEDIA_URL = 'media'
-META_ROOT = os.path.join(BASE_DIR, 'uploads')
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'assets'),
-)

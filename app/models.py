@@ -3,14 +3,12 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User, AbstractUser, Permission
-from imagekit.models import ImageSpecField
 
 
 class Travel(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     origin = models.CharField(max_length=100, verbose_name = 'Origem')
     destiny = models.CharField(max_length=100, verbose_name = 'Destino')
-    image = models.ImageField(upload_to='accounts/', verbose_name='Imagem')
     date = models.DateField(verbose_name = 'Data', auto_now=False)
     hour = models.TimeField(verbose_name = 'Hora', auto_now=False)
 

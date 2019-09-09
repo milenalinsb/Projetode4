@@ -1,7 +1,12 @@
 from django.shortcuts import render
 from . import models
+from django.utils import timezone
 
 # Create your views here.
 
-#def travel_list(request):
-#    return render(request, 'app/travel_list.html', {})
+class TravelListView(ListView):
+    model = models.Travel
+    template_name= 'travel/list.html'
+
+    def get_queryset(self):
+        return models.Travel.object.order_by(date, hour)
