@@ -15,8 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from app import views as app
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', include('app.urls')),
+
+    path('user/new', app.UserNewView.as_view(), name = 'user-create'),
+
+    path('travels/list', app.TravelListView.as_view(), name = 'travel-list'),
+
+    path('travels/new', app.TravelNewView.as_view(), name = 'travel-create'),
+
+    path('travel/<int:pk>/edit', app.TravelUpdateView.as_view(), name = 'travel-update'),
+
+    path('services/', app.TemplateService.as_view(), name = 'services'),
+
+    path('', app.TemplateInicial.as_view(), name = 'initial'),
+
 ]
