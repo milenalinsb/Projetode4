@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Companhia de Viagens</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/balao.png' %}">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <div class="vcard-main-wrapper">
+        <div class="vcard-content-wrapper bg-img" style="background-image: url(img/bg-img/bg4.jpg);">
+
+            <!-- Header Area -->
+            <header class="header_area">
+                <!-- Logo -->
+                <div class="logo d-flex justify-content-center align-items-center">
+                    <a href="{% url 'initial' %}"><img src="{% static 'img/core-img/logoweb3_editor.png' %}" alt=""></a>
+                    <!-- Navbar Toggle -->
+                    <div class="nav-toggle">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                </div>
+
+                <!-- Menu -->
+                <ul class="vcard-nav">
+                    <li><a href="{% url 'initial' %}">Início</a></li>
+                    <li><a href="index-horizontal-contact.html">Cadastro</a></li>
+                    <li><a href="{% url 'travel-list' %}">Viagens</a></li>
+                    <li class="active"><a href="{% url 'services' %}">Criadores</a></li>
+                </ul>
+            </header>
+
+            <!-- Vcard Page Content -->
+            <div class="vcard-page-content-wrapper d-flex align-items-end">
+                <div class="page-content">
+
+                    <!-- ##### Services Area Start ##### -->
+                    <div class="services-area mt-100 clearfix">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <!-- Section Heading -->
+                                <div class="col-12">
+                                    <div class="section-heading">
+                                        <h2>Criadores</h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <!-- Single Service Area -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="single-service-area mb-100">
+                                        <div class="service-title d-flex align-items-end">
+                                            <div class="icon">
+                                                <img src="{% static 'img/core-img/Cinthya.png' %}" alt="">
+                                            </div>
+                                            <h4>Cinthya Parnaiba</h4>
+                                        </div>
+                                        <p>Frontend</p>
+                                    </div>
+                                </div>
+
+                                <!-- Single Service Area -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="single-service-area mb-100">
+                                        <div class="service-title d-flex align-items-end">
+                                            <div class="icon">
+                                                <img src="{% static 'img/core-img/Daniel.png' %}" alt="">
+                                            </div>
+                                            <h4>Daniel Farias</h4>
+                                        </div>
+                                        <p>Documentação</p>
+                                    </div>
+                                </div>
+
+                                <!-- Single Service Area -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="single-service-area mb-100">
+                                        <div class="service-title d-flex align-items-end">
+                                            <div class="icon">
+                                                <img src="{% static 'img/core-img/Gaby.png' %}" alt="">
+                                            </div>
+                                            <h4>Gabriela Dias</h4>
+                                        </div>
+                                        <p>Documentação</p>
+                                    </div>
+                                </div>
+
+                                <!-- Single Service Area -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="single-service-area mb-100">
+                                        <div class="service-title d-flex align-items-end">
+                                            <div class="icon">
+                                                <img src="{% static 'img/core-img/Milena.png' %}" alt="">
+                                            </div>
+                                            <h4>Milena Lins</h4>
+                                        </div>
+                                        <p>Backend</p>
+                                    </div>
+                                </div>
+
+                                <!-- Single Service Area -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="single-service-area mb-100">
+                                        <div class="service-title d-flex align-items-end">
+                                            <div class="icon">
+                                                <img src="{% static 'img/core-img/Sabrina.png' %}" alt="">
+                                            </div>
+                                            <h4>Sabrina Estrela</h4>
+                                        </div>
+                                        <p>Backend</p>
+                                    </div>
+                                </div>
+
+                                <!-- Single Service Area -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="single-service-area mb-100">
+                                        <div class="service-title d-flex align-items-end">
+                                            <div class="icon">
+                                                <img src="{% static 'img/core-img/Sharlinskya.png' %}" alt="">
+                                            </div>
+                                            <h4>Sharlinskya Klismênia</h4>
+                                        </div>
+                                        <p>Frontend</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ##### Services Area End ##### -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'js/active.js' %}"></script>
+
+</body>
+
+</html>

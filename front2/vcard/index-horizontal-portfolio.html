@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Companhia de Viagens</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/balao.png' %}">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <div class="vcard-main-wrapper">
+        <div class="vcard-content-wrapper bg-img">
+            <!-- See More Button -->
+            <div class="row">
+                    <div class="col-12">
+                        <div class="see-more mt-10 text-center mb-10">
+                            <a href="{% url 'travel-create' %}" class="btn vcard-btn">Adicionar Viagem</a>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Header Area -->
+            <header class="header_area">
+                <!-- Logo -->
+                <div class="logo d-flex justify-content-center align-items-center">
+                    <a href="index-horizontal-about.html"><img src="{% static 'img/core-img/logoweb3_editor.png' %}" alt=""></a>
+                    <!-- Navbar Toggle -->
+                    <div class="nav-toggle">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                </div>
+
+                <!-- Menu -->
+                <ul class="vcard-nav">
+                    <li><a href="{% url 'initial' %}">Início</a></li>
+                    <li><a href="index-horizontal-contact.html">Cadastro</a></li>
+                    <li class="active"><a href="{% url 'travel-list' %}">Viagens</a></li>
+                    <li><a href="{% url 'services' %}">Criadores</a></li>
+                </ul>
+            </header> 
+            <!-- Vcard Page Content -->
+            <div class="vcard-page-content-wrapper d-flex align-items-end">
+                <div class="page-content">
+
+                    <!-- ##### Portfolio Area Start ##### -->
+                    <div class="portfolio-area clearfix">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="vcard-projects-menu">
+                                        <div class="portfolio-menu">
+                                            <button class="btn active" data-filter="*">Minhas Viagens</button>
+                                            <button class="btn" data-filter=".web">Viagens dos meus Amigos</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-fluid">
+                            <div class="row vcard-portfolio">
+
+                                <!-- Single gallery Item -->
+                                <!-- <div class="col-12 col-sm-6 col-xl-4 single-portfolio-area web brand">
+                                    <img src="img/bg-img/p1.jpg" alt="">
+                                    <!Content -->
+                                    <!-- <div class="portfolio-content">
+                                        <h5>Brand identity - Company</h5>
+                                        <a href="#" class="catagory">Branding</a>
+                                        <!- Zoom View -->
+                                        <!-- <div class="vcard-img-zoom">
+                                            <a href="img/bg-img/p1.jpg" class="img-url"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                    <!- ##### Portfolio Area End ##### -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'js/active.js' %}"></script>
+
+</body>
+
+</html>
