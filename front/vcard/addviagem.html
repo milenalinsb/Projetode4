@@ -30,9 +30,17 @@
             <div class="col-lg-13">
                 <input type="text" class="form-control" id="destino" placeholder="Cidade">
             </div>
+            <legend>Data da Viagem</legend>
+            <div class="col-lg-13">
+                <input type="datetime" class="form-control" id="data" placeholder="Data">
+            </div>
+            <legend>Hora da Viagem</legend>
+            <div class="col-lg-13">
+                <input type="time" class="form-control" id="hora" placeholder="Horário">
+            </div>
             <div>
-              <input class="btn vcard-btn mt-15" type="submit" value="Adicionar" />
-              <input class="btn vcard-btn mt-15" type="button" value="Cancelar" />
+              <input href="{% url 'initial' %}" class="btn vcard-btn mt-15" type="submit" value="Adicionar" />
+              <input href="{% url 'initial' %}" class="btn vcard-btn mt-15" type="button" value="Cancelar" />
             </div>
           </div>
         </div>

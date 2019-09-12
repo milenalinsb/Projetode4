@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="icon" href="img/core-img/balao.png">
+
+        <link rel="stylesheet" href="style.css">
+        <title>Minhas Viagens</title>
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="row" style="text-align: center">
+                <div class="col-12">
+                    <a href="{% url 'initial' %}"><img src="img/core-img/logoweb3_editor.png" alt=""></a>
+                </div>
+                    {% for post in object_list %}
+                    <div>
+                        <p>Origem: {{ post.origin }}</p>
+                        <p>Destino: {{ post.destiny }}</p>
+                        <p>Data: {{ post.date }}</p>
+                        <p>Hora: {{ post.hour }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+    </body>
+
+<!-- ##### All Javascript Files ##### -->
+<!-- jQuery-2.2.4 js -->
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<!-- Popper js -->
+<script src="js/bootstrap/popper.min.js"></script>
+<!-- Bootstrap js -->
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<!-- All Plugins js -->
+<script src="js/plugins/plugins.js"></script>
+<!-- Active js -->
+<script src="js/active.js"></script>

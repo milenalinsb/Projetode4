@@ -31,7 +31,7 @@
 
             <!-- Contact Button -->
             <div class="horizontal-contact-btn">
-                <a href="#" class="btn vcard-btn contact-btn"><i class="fa fa-envelope-o"></i><span>Login</span></a>
+                <a href="{% url 'login' %}" class="btn vcard-btn contact-btn"><i class="fa fa-envelope-o"></i><span>Login</span></a>
             </div>
 
             <!-- Header Area -->
@@ -48,8 +48,8 @@
                 <!-- Menu -->
                 <ul class="vcard-nav">
                     <li class="active"><a href="{% url 'initial' %}">Início</a></li>
-                    <li><a href="index-horizontal-contact.html">Cadastro</a></li>
-                    <li><a href="{% url 'travel-list' %}">Viagens</a></li>
+                    <li><a href="{% url 'user-create' %}">Cadastro</a></li>
+                    <!-- <li class="active"><a href="{% url 'travel-list' %}">Viagens</a></li>-->
                     <li><a href="{% url 'services' %}">Criadores</a></li>
                 </ul>
             </header>

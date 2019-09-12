@@ -88,7 +88,7 @@
             <header class="header_area">
                 <!-- Logo -->
                 <div class="logo d-flex justify-content-center align-items-center">
-                    <a href="index-horizontal-about.html"><img src="{% static 'img/core-img/logoweb3_editor.png' %}" alt=""></a>
+                    <a href="{% url 'initial' %}"><img src="{% static 'img/core-img/logoweb3_editor.png' %}" alt=""></a>
                     <!-- Navbar Toggle -->
                     <div class="nav-toggle">
                         <i class="fa fa-bars"></i>
@@ -97,10 +97,10 @@
 
                 <!-- Menu -->
                 <ul class="vcard-nav">
-                    <li><a href="index-horizontal-about.html">Início</a></li>
-                    <li class="active"><a href="index-horizontal-contact.html">Cadastro</a></li>
-                    <li><a href="index-horizontal-portfolio.html">Viagens</a></li>
-                    <li><a href="index-horizontal-services.html">Criadores</a></li>
+                    <li><a href="{% url 'initial' %}">Início</a></li>
+                    <li class="active"><a href="{% url 'user-create' %}">Cadastro</a></li>
+                    <!-- <li class="active"><a href="{% url 'travel-list' %}">Viagens</a></li>-->
+                    <li><a href="{% url 'services' %}">Criadores</a></li>
             </header>
 
             <!-- Vcard Page Content -->
@@ -128,19 +128,19 @@
                                                         <input type="text" class="form-control" name="first_name" id="name" placeholder="Name">
                                                     </div>
                                                     <div class="col-12 col-lg-6">
-                                                        <input type="email" class="form-control" name="email" id="email" placeholder="E-mail">
+                                                        <input type="text" class="form-control" name="username" id="username" placeholder="Username">
                                                     </div>
                                                     <div class="col-12 col-lg-6">
-                                                        <input type="text" class="form-control" name="username" id="email" placeholder="Username">
+                                                        <input type="email" class="form-control" name="email" id="email" placeholder="E-mail">
                                                     </div>
                                                     <div class="col-12">
-                                                        <input type="text" class="form-control" name="password1" id="subject" placeholder="Senha">
+                                                        <input type="password" class="form-control" name="password1" id="subject" placeholder="Senha">
                                                     </div>
                                                     <div class="col-12">
-                                                        <input type="text" class="form-control" name="password2" id="subject" placeholder="Digite novamente a senha">
+                                                        <input type="password" class="form-control" name="password2" id="subject" placeholder="Digite novamente a senha">
                                                     </div>
                                                     <div class="col-12">
-                                                        <button class="btn vcard-btn mt-15" type="submit">Cadastrar</button>
+                                                        <button href="{% url 'travel-list' %}" class="btn vcard-btn mt-15" type="submit">Cadastrar</button>
                                                     </div>
                                                 </div>
                                             </form>

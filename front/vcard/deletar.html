@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="icon" href="img/core-img/balao.png">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row" style="text-align: center">
+                <div class="col-12">
+                    <a href="{% url 'initial' %}"><img src="img/core-img/logoweb3_editor.png" alt=""></a>
+                </div>
+            </div>
+        <div class="row row justify-content-md-center" style="text-align: center">
+        <div class="col-lg-4">
+            <h1>Tem certeza?</h1>
+            <input class="btn vcard-btn mt-15" type="reset" value="sim" />
+            <input class="btn vcard-btn mt-15" type="submit" value="não" />
+        </div>
+            <title> Deletar</title>
+            <meta charset="utf-8" />
+            <script type="text/javascript">
+                function removerElemento(elemento) {
+                    console.log("Chamou remover");
+                    elemento.remove();
+                }
+                removerElemento(botaoRemover.parentElement);
+    </body>
+
+<!-- ##### All Javascript Files ##### -->
+<!-- jQuery-2.2.4 js -->
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<!-- Popper js -->
+<script src="js/bootstrap/popper.min.js"></script>
+<!-- Bootstrap js -->
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<!-- All Plugins js -->
+<script src="js/plugins/plugins.js"></script>
+<!-- Active js -->
+<script src="js/active.js"></script>

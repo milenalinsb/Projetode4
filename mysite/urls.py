@@ -24,13 +24,21 @@ urlpatterns = [
 
     path('user/new', app.UserNewView.as_view(), name = 'user-create'),
 
-    path('travels/list', app.TravelListView.as_view(), name = 'travel-list'),
+    path('login/travel-list', app.TravelListView.as_view(), name = 'travel-list'),
+
+    path('login/travel-list/addviagem', app.TravelNewView.as_view(), name = 'travel-create'),
+
+    path('login/travel-list/minhasviagens', app.TemplateMinhasViagens.as_view(), name = 'minhasviagens'),
+
+    path('login/travel-list/viagensmeusamigos', app.TemplateViagensamigos.as_view(), name = 'viagensamigos'),
 
     path('travels/new', app.TravelNewView.as_view(), name = 'travel-create'),
 
     path('travel/<int:pk>/edit', app.TravelUpdateView.as_view(), name = 'travel-update'),
 
     path('services/', app.TemplateService.as_view(), name = 'services'),
+
+    path('login/', app.TemplateLogin.as_view(), name = 'login'),
 
     path('', app.TemplateInicial.as_view(), name = 'initial'),
 
